@@ -1,0 +1,31 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 0px;
+  min-width: 160px;
+  text-align: center;
+  border-radius: 22px;
+  border: none;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 44px;
+
+  color: var(--accent-color);
+  background-color: var(--bg-primary-color);
+  transition: background-color var(--transition-duration-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-hover-bg-color);
+  }
+
+  &__icon {
+    fill: var(--accent-color);
+  }
+}
