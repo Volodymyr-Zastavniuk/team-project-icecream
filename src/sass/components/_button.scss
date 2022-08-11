@@ -1,3 +1,5 @@
+@import'../utils/mixins';
+
 .button {
   display: flex;
   align-items: center;
@@ -28,4 +30,93 @@
   &__icon {
     fill: var(--accent-color);
   }
+}
+
+.button-modal__menu {
+  padding: 17px 48px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.31;
+  align-items: center;
+  text-align: center;
+  color: var(--accent-color);
+  background-color: var(--bg-primary-color);
+  border-radius: 22px;
+
+  @include for-tablet-only {
+    padding: 17px 43px;
+
+  }
+
+
+
+}
+.hero-button__products{
+  padding: 11px 24px;
+  font-size: 14px;
+  line-height: 1.28;
+  align-items: center;
+  text-align: center;
+  color: var(--text-secondary-color);
+  background-color: var(--accent-color);
+  border-radius: 20px;
+
+}
+
+
+.hero-button__hsmade{
+  padding: 11px 24px;
+  font-size: 14px;
+  line-height: 1.28;
+  align-items: center;
+  text-align: center;
+  color: var(--accent-color);
+  background-color: var(--bg-primary-color);
+  border-radius: 20px;
+
+}
+
+.button-location{
+  padding: 17px 17px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.31;
+  align-items: center;
+  text-align: center;
+  color:var(--text-secondary-color);
+  background-color:var(--accent-color);
+  border-radius: 22px;
+
+  @include for-tablet-only{
+    padding: 20px 35px 20px 30px;
+
+  }
+  @include for-desktop-up {
+    padding: 17px 35px;
+
+  }
+
+}
+
+.button-franchise{
+  padding: 17px 32px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.31;
+  align-items: center;
+  text-align: center;
+  color:var(--accent-color);
+  background-color:var(--bg-primary-color);
+  border-radius: 22px;
+
+  @include for-tablet-only {
+      padding: 17px 38px 17px 37px;
+  
+    }
+  
+    @include for-desktop-up {
+      padding: 20px 37px 20px 36px;
+  
+    }
+
 }
