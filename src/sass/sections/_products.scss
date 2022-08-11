@@ -1,6 +1,126 @@
 .products {
   padding-top: 60px;
+  padding-bottom: 60px;
   width: 100%;
-  height: 200px;
+  text-align: center;
+  // height: 200px;
   background-color: var(--bg-six-color);
+  // outline: 1px solid teal;
+}
+
+.products-text {
+  margin: 0;
+  padding: 0;
+}
+
+.products-title {
+  font-weight: 400;
+  font-family: var(--secondary-font);
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.products__span {
+  font-size: 18px;
+  line-height: 1.16;
+  color: var(--text-fourth-color);
+}
+
+.products__title-main {
+  font-size: 34px;
+  color: var(--text-third-color);
+  margin-top: 15px;
+  margin-bottom: 8px;
+
+  @include for-tablet-only {
+    margin-top: 18px;
+  }
+
+  @include for-desktop-up {
+    margin-top: 16px;
+  }
+
+  @include for-tablet-up {
+    margin-bottom: 20px;
+  }
+}
+
+// products-list
+
+.products-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-secondary-color);
+
+  @include for-tablet-up {
+    display: flex;
+  }
+
+  @include for-desktop-up {
+    margin: -16px;
+  }
+}
+
+.products-list__title {
+  font-size: 20px;
+  margin-bottom: 70px;
+}
+
+.products-list__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  padding-left: 41px;
+  padding-right: 39px;
+  margin-bottom: 32px;
+  letter-spacing: 0.04em;
+
+  @include for-tablet-up {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+// product item
+
+.products-list__item {
+  border-radius: 24px;
+  padding-bottom: 40px;
+  padding-top: 20px;
+
+  @include for-tablet-up {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  @include for-desktop-up {
+    margin: 16px;
+  }
+}
+
+.products-list__item--first {
+  background-color: var(--btn-red-hover-bg-color);
+}
+
+.products-list__item--second {
+  background-color: var(--bg-fourth-color);
+}
+
+.products-list__item--third {
+  background-color: var(--bg-fifth-color);
+}
+
+// product btn
+
+.products-list__button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: var(--text-secondary-color);
+  cursor: pointer;
 }
