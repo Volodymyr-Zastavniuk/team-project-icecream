@@ -1,6 +1,163 @@
+.products-text {
+  margin: 0;
+  padding: 0;
+}
+
+.products-title {
+  font-weight: 400;
+  font-family: var(--secondary-font);
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
 .products {
   padding-top: 60px;
+  padding-bottom: 60px;
   width: 100%;
-  height: 200px;
+  text-align: center;
   background-color: var(--bg-six-color);
+
+  &__span {
+    color: var(--text-fourth-color);
+
+    @include for-phone-only {
+      font-size: 18px;
+      line-height: 1.16;
+    }
+
+    @include for-tablet-only {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+
+    @include for-desktop-up {
+      font-size: 30px;
+      line-height: 1.13;
+    }
+  }
+
+  &__title-main {
+    color: var(--text-third-color);
+
+    @include for-phone-only {
+      margin-bottom: 148px;
+      margin-top: 15px;
+      font-size: 34px;
+    }
+
+    @include for-tablet-up {
+      margin-top: 18px;
+      margin-bottom: 150px;
+      font-size: 48px;
+    }
+
+    @include for-desktop-up {
+      margin-top: 16px;
+      margin-bottom: 281px;
+      font-size: 58px;
+      letter-spacing: 0.06em;
+    }
+  }
+}
+
+// products-list
+
+.products-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-secondary-color);
+
+  @include for-phone-only {
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+  }
+
+  @include for-tablet-up {
+    display: flex;
+    margin: 8px;
+  }
+
+  @include for-desktop-up {
+    margin: -16px;
+  }
+
+  &__title {
+    font-size: 20px;
+    margin-bottom: 70px;
+
+    @include for-desktop-up {
+      font-size: 30px;
+      line-height: 1.13;
+    }
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.52;
+    padding-left: 41px;
+    padding-right: 39px;
+    margin-bottom: 32px;
+    letter-spacing: 0.04em;
+
+    @include for-tablet-up {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    @include for-desktop-up {
+      padding-left: 64px;
+      padding-right: 63px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__item {
+    border-radius: 24px;
+    padding-bottom: 40px;
+
+    @include for-phone-only {
+      padding-top: 160px;
+    }
+
+    @include for-tablet-up {
+      padding-top: 118px;
+    }
+
+    @include for-tablet-up {
+      margin: 8px;
+      padding-bottom: 60px;
+    }
+
+    @include for-desktop-up {
+      margin: 16px;
+      padding-top: 165px;
+    }
+  }
+
+  &__item--first {
+    background-color: var(--bg-third-color);
+  }
+
+  &__item--second {
+    background-color: var(--bg-fourth-color);
+  }
+
+  &__item--third {
+    background-color: var(--bg-fifth-color);
+  }
+
+  &__button {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--text-secondary-color);
+    cursor: pointer;
+  }
 }
