@@ -100,7 +100,8 @@
 .advantades__inner{
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 .advantades__icon{
-  align-items: flex-start;
+  margin-bottom: 16px;
 }
