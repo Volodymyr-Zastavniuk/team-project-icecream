@@ -6,6 +6,7 @@
 }
 .footer__content {
   border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 40px;
 }
 .footer__block-text {
   max-width: 234px;
@@ -115,7 +116,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-bottom: 40px;
   }
   .footer__block-text {
     max-width: 340px;
