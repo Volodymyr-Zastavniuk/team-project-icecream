@@ -33,15 +33,15 @@
 }
   &:hover,
   &:focus {
-    color: var(--text-secondary-color);
-    background: var(--btn-red-hover-bg-color);
+    color: var(--accent-color);
+    background: var(--btn-hover-bg-color);
 
   }
 
-  &:hover &__icon,
-  &:focus &__icon {
-    fill: var(--text-secondary-color);
-  }
+  // &:hover &__icon,
+  // &:focus &__icon {
+  //   fill: var(--accent-color);
+  // }
 }
 
 
@@ -102,12 +102,12 @@
    &--white{
     color: var(--accent-color);
     background-color: var(--bg-primary-color);
-        &:hover,
-        &:focus {
-            color: var(--text-secondary-color);
-            background: var(--btn-red-hover-bg-color);
+        // &:hover,
+        // &:focus {
+        //     color: var(--accent-color);
+        //     background: var(--btn-hover-bg-color);
         
-          }
+        //   }
    }
 }
 
