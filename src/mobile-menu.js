@@ -2,7 +2,7 @@
   const menuBtnOpen = document.querySelector('[data-menu-button-open]');
   const menuBtnClose = document.querySelector('[data-menu-button-close]');
   const mobileMenu = document.querySelector('[data-menu]');
-  const htmlLock = document.querySelector('html');
+  const htmlLock = document.querySelector('body');
   const mobileMenuLink = document.querySelector('[data-menu-link]');
 
   const toggleMenu = () => {
