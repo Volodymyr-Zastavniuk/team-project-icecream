@@ -2,10 +2,10 @@
   padding-top: 40px;
   width: 100%;
   // height: 200px;
-  background-color: #fff5f6;
+  background-color: var(--bg-secondary-color);
 }
 .footer__content {
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid var(--icon-secondary-color);
   padding-bottom: 40px;
 }
 .footer__block-text {
@@ -26,7 +26,7 @@
   line-height: 21px;
   text-transform: uppercase;
 
-  color: #ffa5ba;
+  color: var(--text-fourth-color);
   margin-top: 0;
   margin-bottom: 16px;
 }
@@ -40,7 +40,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
 
-  color: #d41443;
+  color: var(--text-third-color);
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -51,11 +51,11 @@
   align-items: center;
   width: 32px;
   height: 32px;
-  background-color: #fea5bb;
+  background-color: var(--icon-primary-color);
   border-radius: 50%;
 }
 .footer__social-link:hover {
-  background-color: #d41443;
+  background-color: var(--accent-color);
 }
 
 .footet__social-list {
