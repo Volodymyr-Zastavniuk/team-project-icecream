@@ -1,13 +1,3 @@
-.products {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  width: 100%;
-  text-align: center;
-  // height: 200px;
-  background-color: var(--bg-six-color);
-  // outline: 1px solid teal;
-}
-
 .products-text {
   margin: 0;
   padding: 0;
@@ -22,28 +12,53 @@
   margin: 0;
 }
 
-.products__span {
-  font-size: 18px;
-  line-height: 1.16;
-  color: var(--text-fourth-color);
-}
+.products {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+  text-align: center;
+  background-color: var(--bg-six-color);
 
-.products__title-main {
-  font-size: 34px;
-  color: var(--text-third-color);
-  margin-top: 15px;
-  margin-bottom: 8px;
+  &__span {
+    color: var(--text-fourth-color);
 
-  @include for-tablet-only {
-    margin-top: 18px;
+    @include for-phone-only {
+      font-size: 18px;
+      line-height: 1.16;
+    }
+
+    @include for-tablet-only {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+
+    @include for-desktop-up {
+      font-size: 30px;
+      line-height: 1.13;
+    }
   }
 
-  @include for-desktop-up {
-    margin-top: 16px;
-  }
+  &__title-main {
+    color: var(--text-third-color);
 
-  @include for-tablet-up {
-    margin-bottom: 20px;
+    @include for-phone-only {
+      margin-bottom: 148px;
+      margin-top: 15px;
+      font-size: 34px;
+    }
+
+    @include for-tablet-up {
+      margin-top: 18px;
+      margin-bottom: 150px;
+      font-size: 48px;
+    }
+
+    @include for-desktop-up {
+      margin-top: 16px;
+      margin-bottom: 281px;
+      font-size: 58px;
+      letter-spacing: 0.06em;
+    }
   }
 }
 
@@ -55,72 +70,94 @@
   list-style: none;
   color: var(--text-secondary-color);
 
+  @include for-phone-only {
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+  }
+
   @include for-tablet-up {
     display: flex;
+    margin: 8px;
   }
 
   @include for-desktop-up {
     margin: -16px;
   }
-}
 
-.products-list__title {
-  font-size: 20px;
-  margin-bottom: 70px;
-}
+  &__title {
+    font-size: 20px;
+    margin-bottom: 70px;
 
-.products-list__text {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.52;
-  padding-left: 41px;
-  padding-right: 39px;
-  margin-bottom: 32px;
-  letter-spacing: 0.04em;
-
-  @include for-tablet-up {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
-
-// product item
-
-.products-list__item {
-  border-radius: 24px;
-  padding-bottom: 40px;
-  padding-top: 20px;
-
-  @include for-tablet-up {
-    &:not(:last-child) {
-      margin-right: 16px;
+    @include for-desktop-up {
+      font-size: 30px;
+      line-height: 1.13;
     }
   }
 
-  @include for-desktop-up {
-    margin: 16px;
+  &__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.52;
+    padding-left: 41px;
+    padding-right: 39px;
+    margin-bottom: 32px;
+    letter-spacing: 0.04em;
+
+    @include for-tablet-up {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    @include for-desktop-up {
+      padding-left: 64px;
+      padding-right: 63px;
+      margin-bottom: 60px;
+    }
   }
-}
 
-.products-list__item--first {
-  background-color: var(--btn-red-hover-bg-color);
-}
+  &__item {
+    border-radius: 24px;
+    padding-bottom: 40px;
 
-.products-list__item--second {
-  background-color: var(--bg-fourth-color);
-}
+    @include for-phone-only {
+      padding-top: 160px;
+    }
 
-.products-list__item--third {
-  background-color: var(--bg-fifth-color);
-}
+    @include for-tablet-up {
+      padding-top: 118px;
+    }
 
-// product btn
+    @include for-tablet-up {
+      margin: 8px;
+      padding-bottom: 60px;
+    }
 
-.products-list__button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border-color: transparent;
-  background-color: var(--text-secondary-color);
-  cursor: pointer;
+    @include for-desktop-up {
+      margin: 16px;
+      padding-top: 165px;
+    }
+  }
+
+  &__item--first {
+    background-color: var(--bg-third-color);
+  }
+
+  &__item--second {
+    background-color: var(--bg-fourth-color);
+  }
+
+  &__item--third {
+    background-color: var(--bg-fifth-color);
+  }
+
+  &__button {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--text-secondary-color);
+    cursor: pointer;
+  }
 }
