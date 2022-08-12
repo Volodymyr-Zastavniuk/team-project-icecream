@@ -4,9 +4,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
 
-  padding: 0px;
+  padding: 0px 30px;
   min-width: 160px;
   text-align: center;
   border-radius: 22px;
@@ -22,52 +22,61 @@
   background-color: var(--bg-primary-color);
   transition: background-color var(--transition-duration-function);
 
-  // &:hover,
-  // &:focus {
-  //   color: var(--text-secondary-color);
-  //   background-color: rgba(212, 20, 67, 0.9);
-  // }
+@include for-desktop-up {
+    padding: 0px 35px;
+    gap: 14px;
+  
+  }
 
-
-
-  // &--red{
-  //   color: var(--text-secondary-color);
-  //   background-color: var(--accent-color);
-  //   &:hover &__icon,
-  //   &:focus &__icon{
-  //       color: var(--accent-color);
-  //       background-color: var(--btn-red-hover-bg-color);
-  //     }
-
-  // }
-    
- 
-}
-
-.button__icon {
+  &__icon {
 fill: var(--text-secondary-color);
 }
-
-.button--white{
-  color: var(--accent-color);
-  background-color: var(--bg-primary-color);
 }
+
+
+
 .button--red {
   color: var(--text-secondary-color);
   background-color: var(--accent-color);
 }
 
 
-// .button:hover,
-// .button:focus {
-//   color: var(--text-secondary-color);
-//   background-color: rgba(212, 20, 67, 0.9);
-// }
+.button--red:hover,
+.button--red:focus{
+      background: #ee9ca7;
+        background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+        background: linear-gradient(to right, #ffdde1, #ee9ca7);
 
+}
 
+.button--red:hover .button__icon,
+.button--red:focus .button__icon {
+ fill:var(--text-secondary-color);
+}
 
+.button--white{
+  color: var(--accent-color);
+  background-color: var(--bg-primary-color);
 
+  .button__icon {
+      fill: var(--accent-color);
+    }
 
+}
+
+.button--white:hover, 
+.button--white:focus {
+  background: #f953c6;
+    background: -webkit-linear-gradient(to right, #b91d73, #f953c6);
+    background: linear-gradient(to right, #b91d73, #f953c6);
+    color: var(--text-secondary-color);
+
+}
+
+.button--white:hover .button__icon,
+.button--white:focus .button__icon {
+  fill: var(--text-secondary-color);
+}
 
 
 .btn-small{
@@ -86,7 +95,9 @@ fill: var(--text-secondary-color);
 
       &:hover,
       &:focus {
-      background: rgba(212, 20, 67, 0.9);
+      background: #ee9ca7;
+      background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
           
       }
 
@@ -103,7 +114,10 @@ fill: var(--text-secondary-color);
     background-color: var(--bg-primary-color);
         &:hover,
         &:focus {
-            background: var(--btn-red-hover-bg-color);
+              background: #f953c6;
+              background: -webkit-linear-gradient(to right, #b91d73, #f953c6);
+              background: linear-gradient(to right, #b91d73, #f953c6);
+              color: var(--text-secondary-color);
         
           }
    }
