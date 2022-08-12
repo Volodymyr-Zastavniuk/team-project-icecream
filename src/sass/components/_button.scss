@@ -22,15 +22,26 @@
   background-color: var(--bg-primary-color);
   transition: background-color var(--transition-duration-function);
 
-@include for-desktop-up {
+  @include for-desktop-up {
     padding: 0px 35px;
     gap: 14px;
   
   }
 
   &__icon {
-fill: var(--text-secondary-color);
+  fill: var(--accent-color);
 }
+  &:hover,
+  &:focus {
+    color: var(--text-secondary-color);
+    background: var(--btn-red-hover-bg-color);
+
+  }
+
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: var(--text-secondary-color);
+  }
 }
 
 
@@ -38,50 +49,30 @@ fill: var(--text-secondary-color);
 .button--red {
   color: var(--text-secondary-color);
   background-color: var(--accent-color);
-}
-
-
-.button--red:hover,
-.button--red:focus{
-      background: #ee9ca7;
-        background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
-        background: linear-gradient(to right, #ffdde1, #ee9ca7);
-
-}
-
-.button--red:hover .button__icon,
-.button--red:focus .button__icon {
- fill:var(--text-secondary-color);
-}
-
-.button--white{
-  color: var(--accent-color);
-  background-color: var(--bg-primary-color);
-
+  
   .button__icon {
-      fill: var(--accent-color);
-    }
+        fill: var(--text-secondary-color);
+      }
 
+
+ &:hover,
+ &:focus{
+  background: var(--btn-hover-bg-color);
+  color: var(--accent-color);
+} 
+
+  &:hover .button__icon,
+  &:focus .button__icon {
+    fill: var(--accent-color);
+  }
 }
 
-.button--white:hover, 
-.button--white:focus {
-  background: #f953c6;
-    background: -webkit-linear-gradient(to right, #b91d73, #f953c6);
-    background: linear-gradient(to right, #b91d73, #f953c6);
-    color: var(--text-secondary-color);
 
-}
-
-.button--white:hover .button__icon,
-.button--white:focus .button__icon {
-  fill: var(--text-secondary-color);
-}
 
 
 .btn-small{
     display: inline-block;
-    padding: 9px 15px;
+    padding: 7px 14px;
     min-width: 63px;
     color:var(--bg-primary-color);
     background-color: var(--accent-color);
@@ -95,14 +86,13 @@ fill: var(--text-secondary-color);
 
       &:hover,
       &:focus {
-      background: #ee9ca7;
-      background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
-      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      background: var(--btn-hover-bg-color);
+      color: var(--accent-color);
           
       }
 
     @include for-desktop-up{
-      padding: 15px 26px;
+      padding: 11px 21px;
       min-width: 107px;
       font-size: 14px;
       line-height: 1.3;
@@ -114,85 +104,11 @@ fill: var(--text-secondary-color);
     background-color: var(--bg-primary-color);
         &:hover,
         &:focus {
-              background: #f953c6;
-              background: -webkit-linear-gradient(to right, #b91d73, #f953c6);
-              background: linear-gradient(to right, #b91d73, #f953c6);
-              color: var(--text-secondary-color);
+            color: var(--text-secondary-color);
+            background: var(--btn-red-hover-bg-color);
         
           }
    }
 }
 
 
-
-
-// }
-// .button__hero--products{
-//   padding: 11px 24px;
-//   font-size: 14px;
-//   line-height: 1.28;
-//   align-items: center;
-//   text-align: center;
-//   color: var(--text-secondary-color);
-//   background-color: var(--accent-color);
-//   border-radius: 20px;
-
-// }
-
-
-// .button__hero--hsmade{
-//   padding: 11px 24px;
-//   font-size: 14px;
-//   line-height: 1.28;
-//   align-items: center;
-//   text-align: center;
-//   color: var(--accent-color);
-//   background-color: var(--bg-primary-color);
-//   border-radius: 20px;
-
-// }
-
-// .button__location{
-//   padding: 17px 17px;
-//   font-size: 16px;
-//   font-weight: 700;
-//   line-height: 1.31;
-//   align-items: center;
-//   text-align: center;
-//   color:var(--text-secondary-color);
-//   background-color:var(--accent-color);
-//   border-radius: 22px;
-
-//   @include for-tablet-only{
-//     padding: 20px 35px 20px 30px;
-
-//   }
-//   @include for-desktop-up {
-//     padding: 17px 35px;
-
-//   }
-
-// }
-
-// .button__franchise{
-//   padding: 17px 32px;
-//   font-size: 17px;
-//   font-weight: 700;
-//   line-height: 1.31;
-//   align-items: center;
-//   text-align: center;
-//   color:var(--accent-color);
-//   background-color:var(--bg-primary-color);
-//   border-radius: 22px;
-
-//   @include for-tablet-only {
-//       padding: 17px 38px 17px 37px;
-  
-//     }
-  
-//     @include for-desktop-up {
-//       padding: 20px 37px 20px 36px;
-  
-//     }
-
-// }
