@@ -80,12 +80,16 @@
 
   &__title {
     font-size: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 32px;
 
     @include for-desktop-up {
       font-size: 30px;
       line-height: 1.13;
     }
+  }
+
+  &__icon {
+    margin-bottom: 32px;
   }
 
   &__text {
@@ -126,11 +130,11 @@
       &::before {
         position: absolute;
         top: 0;
-        left: 0;
+        left: 50%;
         content: '';
-        width: 100%;
+        width: 280px;
         height: 280px;
-        transform: translateY(-50%);
+        transform: translate(-50%, -50%);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -142,6 +146,8 @@
 
         @include for-tablet-up {
           background-image: url(../images/ice-cream-224px.png);
+          width: 100%;
+          left: 0;
           height: 224px;
           transform: translateY(-60%);
 
@@ -172,11 +178,11 @@
       &::before {
         position: absolute;
         top: 0;
-        left: 0;
+        left: 50%;
         content: '';
-        width: 100%;
+        width: 280px;
         height: 280px;
-        transform: translateY(-50%);
+        transform: translate(-50%, -50%);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -189,6 +195,8 @@
         @include for-tablet-up {
           background-image: url(../images/ice-coffee-224px.png);
           height: 224px;
+          width: 100%;
+          left: 0;
           transform: translateY(-60%);
 
           @include for-pixel-ratio-2 {
@@ -218,12 +226,11 @@
       &::before {
         position: absolute;
         top: 0;
-        left: 0;
+        left: 50%;
         content: '';
-        width: 100%;
+        width: 280px;
         height: 280px;
-
-        transform: translateY(-50%);
+        transform: translate(-50%, -50%);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -236,6 +243,8 @@
         @include for-tablet-up {
           background-image: url(../images/milkshakes-224px.png);
           height: 224px;
+          width: 100%;
+          left: 0;
           transform: translateY(-60%);
 
           @include for-pixel-ratio-2 {
