@@ -1,19 +1,26 @@
-.spacer {
-  height: 6px;
+.header {
+  padding: 6px 0 1px;
+  position: relative;
   background-color: var(--bg-third-color);
 
   @include for-tablet-up {
-    height: 30px;
+    padding: 30px 0 1px;
   }
 
   @include for-desktop-up {
-    height: 35px;
+    padding: 35px 0 1px;
   }
-}
 
-.header {
-  position: relative;
-  background-color: var(--bg-third-color);
+  &__scrolled {
+    padding: 1px 0 1px;
+    position: sticky;
+    top: 0px;
+    left: 0;
+    z-index: 10;
+
+    animation-name: fadein;
+    animation-duration: 300ms;
+  }
 
   &__inner {
     height: 52px;
@@ -54,6 +61,10 @@
     font-weight: 700;
     font-size: 16px;
     color: var(--text-secondary-color);
+
+    &:focus {
+      color: inherit;
+    }
   }
 
   // "buy now" кнопка в главном меню
@@ -104,7 +115,6 @@
     }
 
     &.is-open {
-      display: block;
       opacity: 1;
       pointer-events: initial;
       visibility: visible;
@@ -142,7 +152,7 @@
     box-shadow: (8px 0px 20px rgba(0, 0, 0, 0.25));
 
     background-color: var(--bg-modal-color);
-    transition: transform 150ms linear 50ms;
+    transition: transform 250ms linear;
 
     transform: translateX(-100%);
 
@@ -179,7 +189,7 @@
     color: var(--text-secondary-color);
   }
 
-  // "buy now" button at Mobile menu
+  // "buy now" кнопка в мобильном меню
   &__mobile-button {
     order: -1;
     margin: 0 20px;
@@ -187,9 +197,18 @@
     @include for-tablet-up {
       margin: 0 34px;
     }
+  }
+}
 
-    @include for-desktop-up {
-      display: none;
-    }
+// анимация появления меню навигации при скролле страницы
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(-52px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
