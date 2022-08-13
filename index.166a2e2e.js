@@ -1,2 +1,0 @@
-!function(){function e(){refs.modal.classList.toggle("map-is-hidden"),refs.htmlLock.classList.toggle("overflow-hidden")}refs={openModalBtn:document.querySelector("[data-modal-open-map]"),closeModalBtn:document.querySelector("[data-modal-close-map]"),modal:document.querySelector("[data-modal-map]"),htmlLock:document.querySelector("body")},refs.openModalBtn.addEventListener("click",e),refs.closeModalBtn.addEventListener("click",e)}();
-//# sourceMappingURL=index.166a2e2e.js.map
