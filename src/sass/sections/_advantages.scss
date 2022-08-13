@@ -1,53 +1,46 @@
-
-
 .advantages {
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 60px;
   width: 100%;
   background-color: var(--bg-secondary-color);
 
- 
-
-  @include for-tablet-only{
+  @include for-tablet-only {
     padding-top: 60px;
     padding-bottom: 64px;
   }
-  @include  for-desktop-up {
-  padding-top: 120px;
-  padding-bottom: 120px;
+
+  @include for-desktop-up {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
 }
 
-}
-
-.advantages__list{
+.advantages__list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 32px;
+  gap: 28px;
   list-style: none;
   padding: 0px;
   margin: 0px;
 
-   @include for-tablet-up{
-    display: flex; 
+  @include for-tablet-up {
+    display: flex;
     align-items: center;
     flex-direction: row;
     gap: 22px;
   }
-    @include for-desktop-up{
-    
+  @include for-desktop-up {
     align-items: center;
-    gap: 80px;
-   
+    gap: 100px;
   }
 }
 
-
-
-.advantages__number{
+.advantages__number {
   display: inline-block;
   font-family: var(--secondary-font);
-  color: var( --text-third-color);
+  color: var(--text-third-color);
+  text-transform: uppercase;
   font-size: 36px;
   font-weight: 400;
   line-height: 1.13;
@@ -56,9 +49,9 @@
 
   @include for-tablet-only {
     font-weight: 400;
-      font-size: 48px;
-      line-height: 1.14;
-      margin-bottom: 19px;
+    font-size: 48px;
+    line-height: 1.14;
+    margin-bottom: 19px;
   }
 
   @include for-desktop-up {
@@ -66,11 +59,9 @@
     line-height: 1.13;
     margin-bottom: 15px;
   }
-  
 }
 
-.advantages__text{
-
+.advantages__text {
   font-family: var(--primary-font);
   font-style: normal;
   font-weight: 700;
@@ -80,27 +71,26 @@
   max-width: 230px;
   margin-bottom: 0;
 
-  @include for-tablet-only{
-   max-width: 170px;
-   font-size: 14px;
-   line-height: 1.71;
+  @include for-tablet-only {
+    max-width: 170px;
+    font-size: 14px;
+    line-height: 1.71;
   }
-  @include for-desktop-up{
-   max-width: 317px;
-   font-size: 16px;
-   line-height: 1.75;
-   letter-spacing: 0.02em;
+  @include for-desktop-up {
+    max-width: 290px;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.02em;
   }
-
 }
 
-.advantades__inner{
+.advantades__inner {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.advantades__inner--heart::before{
+.advantades__inner--heart::before {
   content: '';
   width: 50px;
   height: 50px;
@@ -108,31 +98,30 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  // margin-bottom: 25px;
   margin-bottom: 16px;
-  @include for-pixel-ratio-2{
+  @include for-pixel-ratio-2 {
     background-image: url(../images/heart@2x.png);
   }
 
   @include for-tablet-up {
-      width: 50px;
-      height: 50px;
-      margin-bottom: 40px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 36px;
   }
   @include for-desktop-up {
-    margin-bottom: 55px;
+    margin-bottom: 40px;
   }
 }
 
 .advantades__inner--glass::before {
   content: '';
-  width: 33px;
+  width: 50px;
   height: 50px;
   background-image: url(../images/glass/glass-mob@1x.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  margin-bottom: 25px;
+  margin-bottom: 16px;
 
   @include for-pixel-ratio-2 {
     background-image: url(../images/glass/glass-mob@2x.png);
@@ -141,27 +130,27 @@
   @include for-tablet-up {
     width: 50px;
     height: 50px;
-    margin-bottom: 41px;
+    margin-bottom: 36px;
     background-image: url(../images/glass/glass-desktop@1x.png);
     @include for-pixel-ratio-2 {
-        background-image: url(../images/glass/glass-desktop@2x.png);
-      }
+      background-image: url(../images/glass/glass-desktop@2x.png);
+    }
   }
 
   @include for-desktop-up {
-    margin-bottom: 55px;
+    margin-bottom: 40px;
   }
 }
 
 .advantades__inner--apple::before {
   content: '';
-  width: 33px;
+  width: 50px;
   height: 50px;
   background-image: url(../images/apples/apple-mob@1x.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  margin-bottom: 25px;
+  margin-bottom: 16px;
 
   @include for-pixel-ratio-2 {
     background-image: url(../images/apples/apple-mob@2x.png);
@@ -170,7 +159,7 @@
   @include for-tablet-up {
     width: 50px;
     height: 50px;
-    margin-bottom: 41px;
+    margin-bottom: 36px;
     background-image: url(../images/apples/apples-desktop@1x.png);
 
     @include for-pixel-ratio-2 {
@@ -179,8 +168,6 @@
   }
 
   @include for-desktop-up {
-    margin-bottom: 55px;
+    margin-bottom: 40px;
   }
 }
-
-
