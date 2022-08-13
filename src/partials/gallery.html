@@ -2,14 +2,20 @@
   <div class="gallery__wrapper container">
     <h2 class="visually-hidden">gallery</h2>
     <div class="gallery__item-wrapper">
-      <picture class="gallery__img shift-bottom-1" >
-        <source srcset="/src/images/jpg/product-photo-1_320.jpg 1x, /src/images/jpg/product-photo-1_320@2x.jpg 2x"
-          media="(max-width: 320px)" />
-        <source srcset="/src/images/jpg/product-photo-1_1200.jpg 1x, /src/images/jpg/product-photo-1_1200@2x.jpg 2x"
-          media="(min-width: 1200px)" />
-        <source srcset="/src/images/jpg/product-photo-1_768.jpg 1x, /src/images/jpg/product-photo-1_768@2x.jpg 2x"
-          media="(min-width: 321px)" />
-        <img src="/src/images/jpg/product-photo-1_768.jpg" alt="Фото морозива в дерев'яному посуді" />
+      <source srcset="
+              ./images/jpg/product-photo-1_320.jpg    1x,
+              ./images/jpg/product-photo-1_320@2x.jpg 2x
+            " media="(max-width: 767px)" />
+      <source srcset="
+              ./images/jpg/product-photo-1_768.jpg    1x,
+              ./images/jpg/product-photo-1_768@2x.jpg 2x
+            " media="(max-width: 1199px)" />
+      <source srcset="
+              ./images/jpg/product-photo-1_1200.jpg    1x,
+              ./images/jpg/product-photo-1_1200@2x.jpg 2x
+            " media="(min-width: 1200px)" />
+      
+      <img loading="lazy" src="./images/jpg/product-photo-1_768.jpg" alt="Фото морозива в дерев'яному посуді" />
       </picture>
     </div>
     <div class="gallery__item-wrapper">
@@ -20,7 +26,7 @@
           media="(min-width: 1200px)" />
         <source srcset="/src/images/jpg/product-photo-2_768.jpg 1x, /src/images/jpg/product-photo-2_768@2x.jpg 2x"
           media="(min-width: 321px)" />
-        <img src="/src/images/jpg/product-photo-2_768.jpg" alt="Фото морозива в ріжку" />
+        <img loading="lazy" src="/src/images/jpg/product-photo-2_768.jpg" alt="Фото морозива в ріжку" />
       </picture>
       <picture class="gallery__img">
         <source srcset="/src/images/jpg/product-photo-3_320.jpg 1x, /src/images/jpg/product-photo-3_320@2x.jpg 2x"
@@ -29,7 +35,7 @@
           media="(min-width: 1200px)" />
         <source srcset="/src/images/jpg/product-photo-3_768.jpg 1x, /src/images/jpg/product-photo-3_768@2x.jpg 2x"
           media="(min-width: 321px)" />
-        <img src="/src/images/jpg/product-photo-3_768.jpg" alt="Фото шести порцій морозива на паличці" />
+        <img loading="lazy" src="/src/images/jpg/product-photo-3_768.jpg" alt="Фото шести порцій морозива на паличці" />
       </picture>
     </div>
     <div class="gallery__item-wrapper">
@@ -40,7 +46,7 @@
         media="(min-width: 1200px)" />
       <source srcset="/src/images/jpg/product-photo-4_768.jpg 1x, /src/images/jpg/product-photo-4_768@2x.jpg 2x"
         media="(min-width: 321px)" />
-      <img src="/src/images/jpg/product-photo-4_768.jpg" alt="Фото восьми ріжків морозива" />
+      <img loading="lazy" src="/src/images/jpg/product-photo-4_768.jpg" alt="Фото восьми ріжків морозива" />
     </picture>
     <picture class="gallery__img half-fill">
       <source srcset="/src/images/jpg/product-photo-5_320.jpg 1x, /src/images/jpg/product-photo-5_320@2x.jpg 2x"
@@ -49,7 +55,7 @@
         media="(min-width: 1200px)" />
       <source srcset="/src/images/jpg/product-photo-5_768.jpg 1x, /src/images/jpg/product-photo-5_768@2x.jpg 2x"
         media="(min-width: 321px)" />
-      <img src="/src/images/jpg/product-photo-5_768.jpg" alt="Фото дівчини з морозивом" />
+      <img loading="lazy" src="/src/images/jpg/product-photo-5_768.jpg" alt="Фото дівчини з морозивом" />
     </picture>
     </div>
     <div class="gallery__item-wrapper">
@@ -60,7 +66,7 @@
           media="(min-width: 1200px)" />
         <source srcset="/src/images/jpg/product-photo-6_768.jpg 1x, /src/images/jpg/product-photo-6_768@2x.jpg 2x"
           media="(min-width: 321px)" />
-        <img src="/src/images/jpg/product-photo-6_768.jpg" alt="Фото трьох порцій морозива в скляному посуді" />
+        <img loading="lazy" src="/src/images/jpg/product-photo-6_768.jpg" alt="Фото трьох порцій морозива в скляному посуді" />
       </picture>
       <picture class="gallery__img">
         <source srcset="/src/images/jpg/product-photo-7_320.jpg 1x, /src/images/jpg/product-photo-7_320@2x.jpg 2x"
@@ -69,7 +75,7 @@
           media="(min-width: 1200px)" />
         <source srcset="/src/images/jpg/product-photo-7_768.jpg 1x, /src/images/jpg/product-photo-7_768@2x.jpg 2x"
           media="(min-width: 321px)" />
-        <img src="/src/images/jpg/product-photo-7_768.jpg" alt="Фото морозива в ріжку на фоні вулиці" />
+        <img loading="lazy" src="/src/images/jpg/product-photo-7_768.jpg" alt="Фото морозива в ріжку на фоні вулиці" />
       </picture>
     </div>
     <div class="gallery__item-wrapper">
@@ -80,7 +86,7 @@
           media="(min-width: 1200px)" />
         <source srcset="/src/images/jpg/product-photo-8_768.jpg 1x, /src/images/jpg/product-photo-8_768@2x.jpg 2x"
           media="(min-width: 321px)" />
-        <img src="/src/images/jpg/product-photo-8_768.jpg" alt="Фото пса, який лиже морозиво" />
+        <img loading="lazy" src="/src/images/jpg/product-photo-8_768.jpg" alt="Фото пса, який лиже морозиво" />
       </picture>
       <picture class="gallery__img shift-bottom-6">
         <source srcset="/src/images/jpg/product-photo-9_320.jpg 1x, /src/images/jpg/product-photo-9_320@2x.jpg 2x"
@@ -89,7 +95,7 @@
           media="(min-width: 1200px)" />
         <source srcset="/src/images/jpg/product-photo-9_768.jpg 1x, /src/images/jpg/product-photo-9_768@2x.jpg 2x"
           media="(min-width: 321px)" />
-        <img src="/src/images/jpg/product-photo-9_768.jpg" alt="Фото молочного коктеля в стакані" />
+        <img loading="lazy" src="/src/images/jpg/product-photo-9_768.jpg" alt="Фото молочного коктеля в стакані" />
       </picture>
     </div>
     <div class="gallery__item-wrapper">
@@ -100,7 +106,7 @@
           media="(min-width: 1200px)" />
         <source srcset="/src/images/jpg/product-photo-10_768.jpg 1x, /src/images/jpg/product-photo-10_768@2x.jpg 2x"
           media="(min-width: 321px)" />
-        <img src="/src/images/jpg/product-photo-10_768.jpg" alt="Фото молока в банці з пончиком" />
+        <img loading="lazy" src="/src/images/jpg/product-photo-10_768.jpg" alt="Фото молока в банці з пончиком" />
       </picture>
     </div>
   </div>

@@ -10,12 +10,12 @@
     max-width: 767px;
     display: flex;
 
-    @media screen and (min-width: 768px) {
+    @include for-tablet-up {
       padding-top: 64px;
       max-width: 768px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include for-desktop-up {
       padding-top: 120px;
       max-width: 1013px;
     }
@@ -30,19 +30,20 @@
   &__item-wrapper + &__item-wrapper {
     margin-left: 2.5px;
 
-    @media screen and (min-width: 768px) {
+    @include for-tablet-up {
        margin-left: 6px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include for-desktop-up {
       margin-left: 8px;
     }
   }
   
   &__img {
     border-radius: 8px;
+    overflow: hidden;
 
-    @media screen and (min-width: 767px) {
+    @include for-tablet-up {
       border-radius: 20px;
     }
   }
@@ -50,11 +51,11 @@
   &__img:nth-child(2n) {
     margin-top: 2.5px;
     
-      @media screen and (min-width: 768px) {
+      @include for-tablet-up {
         margin-top: 6px;
       }
     
-      @media screen and (min-width: 1200px) {
+      @include for-desktop-up {
         margin-top: 8px;
       }
   }
