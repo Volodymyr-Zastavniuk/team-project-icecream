@@ -8,13 +8,13 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
-  .container { 
-  @mixin for-phone-only {
-   background-image:url('../images/about/milk-mob-2x.png');
-   background-repeat: no-repeat;
-   background-size: contain;
-}
-  }
+//   .container { 
+//   @mixin for-phone-only {
+//    background-image:url('../images/about/milk-mob-2x.png');
+//    background-repeat: no-repeat;
+//    background-size: contain;
+// }
+//   }
 }
 
 .about__span {
@@ -135,8 +135,13 @@ margin-bottom: 20px;
 
 .block-flex {
   display: block;
+  background-image:url('../images/about/milk-mob-2x.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+
   @include for-tablet-up {
     display: flex;
+    background-image:none;
 }
 }
 
