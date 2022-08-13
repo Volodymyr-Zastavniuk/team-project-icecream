@@ -1,4 +1,6 @@
-
+// Иконка стрелочка для больших кнопок
+// <svg class="button__icon" width="8" height="16"> <use href="./images/svg/symbol-defs.svg#icon-single-right"></use></svg>
+//
 
 .button {
   display: inline-flex;
@@ -25,17 +27,15 @@
   @include for-desktop-up {
     padding: 0px 35px;
     gap: 14px;
-  
   }
 
   &__icon {
-  fill: var(--accent-color);
-}
+    fill: var(--accent-color);
+  }
   &:hover,
   &:focus {
     color: var(--accent-color);
     background: var(--btn-hover-bg-color);
-
   }
 
   // &:hover &__icon,
@@ -44,22 +44,19 @@
   // }
 }
 
-
-
 .button--red {
   color: var(--text-secondary-color);
   background-color: var(--accent-color);
-  
+
   .button__icon {
-        fill: var(--text-secondary-color);
-      }
+    fill: var(--text-secondary-color);
+  }
 
-
- &:hover,
- &:focus{
-  background: var(--btn-hover-bg-color);
-  color: var(--accent-color);
-} 
+  &:hover,
+  &:focus {
+    background: var(--btn-hover-bg-color);
+    color: var(--accent-color);
+  }
 
   &:hover .button__icon,
   &:focus .button__icon {
@@ -67,48 +64,41 @@
   }
 }
 
+.btn-small {
+  display: inline-block;
+  padding: 7px 14px;
+  min-width: 63px;
+  color: var(--bg-primary-color);
+  background-color: var(--accent-color);
+  border-radius: 20px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  border: none;
+  cursor: pointer;
 
+  &:hover,
+  &:focus {
+    background: var(--btn-hover-bg-color);
+    color: var(--accent-color);
+  }
 
+  @include for-desktop-up {
+    padding: 11px 21px;
+    min-width: 107px;
+    font-size: 14px;
+    line-height: 1.3;
+  }
 
-.btn-small{
-    display: inline-block;
-    padding: 7px 14px;
-    min-width: 63px;
-    color:var(--bg-primary-color);
-    background-color: var(--accent-color);
-    border-radius: 20px;
-    font-family: inherit;
-    font-weight: 400;
-    font-size: 8px;
-    line-height: 1.25;
-    border: none;
-    cursor: pointer;
-
-      &:hover,
-      &:focus {
-      background: var(--btn-hover-bg-color);
-      color: var(--accent-color);
-          
-      }
-
-    @include for-desktop-up{
-      padding: 11px 21px;
-      min-width: 107px;
-      font-size: 14px;
-      line-height: 1.3;
-    }
-
-
-   &--white{
+  &--white {
     color: var(--accent-color);
     background-color: var(--bg-primary-color);
-        // &:hover,
-        // &:focus {
-        //     color: var(--accent-color);
-        //     background: var(--btn-hover-bg-color);
-        
-        //   }
-   }
+    // &:hover,
+    // &:focus {
+    //     color: var(--accent-color);
+    //     background: var(--btn-hover-bg-color);
+
+    //   }
+  }
 }
-
-
