@@ -2,11 +2,39 @@
 .about {
   padding-top: 60px;
   width: 100%;
-  height: 900px;
   background-color: var(--bg-secondary-color);
+  .container {
+    background-image:url('../images/about/milk-mob-2x.png');
+    width: 100%;
+    background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+    @media not all,
+ screen and (min-width: 320px) and (min-resolution: 192dpi),
+ screen and (min-width: 320px) and (min-resolution: 2dppx) {
+ background-image: 
+url('../images/about/milk-mob-2x.png');
+}
+ @media screen and (min-width:768px) {
+ max-width: 768px;
+ background-image: none;
+ 
+ }
+ @media screen and (min-width:1200px) {
+ max-width: 1200px;
+ background-image: 
+url('../images/about/milk-2x.png');
+}
+@media not all,
+screen and (min-width: 1200px) and (min-resolution: 192dpi),
+screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+background-image: 
+url('../images/about/milk-2x.png');
+}
+  }
 }
 
-.about-span {
+.about__span {
 display: block;
 font-family: var(--secondary-font);
 font-style: normal;
@@ -18,7 +46,7 @@ text-align: center;
 margin-bottom: 15px;
 color: #FFA5BA;
 
-@include for-tablet-only {
+@include for-desktop-up {
   font-size: 26px;
   line-height:calc(30 / 26);
 }
@@ -42,26 +70,44 @@ margin-bottom: 32px;
 
 color: var(--text-third-color);
 
-@include for-tablet-only {
+@include for-tablet-up {
   font-size: 48px;
   line-height:calc(55 / 48);
+  margin-bottom: 40px;
 }
 
 @include for-desktop-up {
   font-size: 58px;
   line-height:calc(66 / 58);
   letter-spacing: 0.06em;
+  margin-bottom: 60px;
 }
 
 }
 
 .about__text-1 {
-  font-family: var(--primary-font);
+font-family: var(--primary-font);
 font-style: normal;
 font-weight: 500;
 font-size: 12px;
 line-height: calc(19 / 12);
 color: var(--text-primary-color);
+margin-bottom: 24px;
+
+@include for-tablet-up {
+  width: 334px;
+  font-size: 14px;
+  line-height: calc(25 / 14);
+  
+}
+
+@include for-desktop-up {
+  width: 463px;
+  font-size: 16px;
+  line-height: calc(28 / 16);
+  letter-spacing: 0.04em;
+  margin-bottom: 32px;
+}
 }
 
 .about__text-2 {
@@ -71,4 +117,50 @@ font-weight: 500;
 font-size: 12px;
 line-height: calc(19 / 12);
 color: var(--text-fifth-color);
+margin-bottom: 20px;
+
+@include for-tablet-up {
+  width: 334px;
+  font-size: 14px;
+  line-height: calc(25 / 14);
+  margin-bottom: 40px;
+  
+}
+
+@include for-desktop-up {
+  width: 463px;
+  font-size: 16px;
+  line-height: calc(28 / 16);
+  letter-spacing: 0.04em;
+}
+}
+
+.about-text-block {
+  // outline: 2px solid #2196F3;
+  padding: 0px 60px 0px 0px;
+
+  @include for-tablet-up {
+    margin-left: 32px;
+    padding: 0px 14px 0px 0px;
+}
+@include for-desktop-up {
+  margin-left: 99px;
+  padding: 90px 60px 20px 0px;
+}
+}
+
+.block-flex {
+  display: block;
+  @include for-tablet-up {
+    display: flex;
+}
+}
+
+.images-cow {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.button {
+
 }
