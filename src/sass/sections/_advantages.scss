@@ -1,6 +1,4 @@
-// p{
-//   margin: 0;
-// }
+
 
 .advantages {
   padding-top: 40px;
@@ -8,7 +6,7 @@
   width: 100%;
   background-color: var(--bg-secondary-color);
 
-  outline: 1px solid tomato;
+ 
 
   @include for-tablet-only{
     padding-top: 60px;
