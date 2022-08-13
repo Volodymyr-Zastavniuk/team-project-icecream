@@ -1,5 +1,5 @@
 // Иконка стрелочка для больших кнопок
-// <svg class="button__icon" width="8" height="16"> <use href="./images/svg/symbol-defs.svg#icon-single-right"></use></svg>
+// <svg class="button__icon" width="8" height="16" aria-hidden="true"> <use href="./images/svg/symbol-defs.svg#icon-single-right"></use></svg>
 //
 
 .button {
@@ -8,7 +8,7 @@
   justify-content: center;
   gap: 8px;
 
-  padding: 0px 30px;
+  padding: 0px 20px;
   min-width: 160px;
   text-align: center;
   border-radius: 22px;
@@ -23,6 +23,11 @@
   color: var(--accent-color);
   background-color: var(--bg-primary-color);
   transition: background-color var(--transition-duration-function);
+
+  @include for-tablet-up {
+    padding: 0px 30px;
+    gap: 12px;
+  }
 
   @include for-desktop-up {
     padding: 0px 35px;
