@@ -1,6 +1,45 @@
 .reviews {
   padding-top: 60px;
   width: 100%;
-  height: 200px;
-  background-color: var(--bg-six-color);
+  height: auto;
+
+  &__foto {
+    width: 85px;
+    height: 85px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-image: url('../images/reviews/testimonials1.jpg');
+  }
+  &__style {
+    position: relative;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: var(--bg-six-color);
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(53px, 30px);
+      content: '';
+      width: 54px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('../images/svg/svgoriginal/“.svg');
+    }
+  }
+  &__text {
+    font-size: 12px;
+    line-height: 255%;
+    /* or 31px */
+    text-align: center;
+
+    width: 100%;
+    padding: 43px 8px 26px 15px;
+  }
 }
