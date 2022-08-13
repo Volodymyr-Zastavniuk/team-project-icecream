@@ -1,3 +1,7 @@
+.spacer {
+  height: 0;
+}
+
 .header {
   padding: 6px 0 1px;
   position: relative;
@@ -20,6 +24,22 @@
 
     animation-name: fadein;
     animation-duration: 300ms;
+
+    //нужен для корректного перехода по меню,
+    // иначе немного прыгает контент, при первом переходе и
+    // нажатии на то же меню.
+    & ~ .spacer {
+      background-color: var(--bg-third-color);
+      height: 5px;
+
+      @include for-tablet-up {
+        height: 29px;
+      }
+
+      @include for-desktop-up {
+        height: 34px;
+      }
+    }
   }
 
   &__inner {
