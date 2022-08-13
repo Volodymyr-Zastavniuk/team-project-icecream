@@ -16,12 +16,14 @@
   &__style {
     position: relative;
     width: 100%;
+    height: auto;
+    padding-top: 43px;
     padding-left: 50px;
     padding-right: 50px;
     background-color: var(--bg-six-color);
-
     &::after {
       position: absolute;
+      z-index: 1;
       top: 0;
       left: 0;
       transform: translate(53px, 30px);
@@ -33,13 +35,66 @@
       background-image: url('../images/svg/svgoriginal/“.svg');
     }
   }
+
   &__text {
     font-size: 12px;
-    line-height: 255%;
-    /* or 31px */
+    line-height: 2.58;
     text-align: center;
+    z-index: 0;
 
     width: 100%;
-    padding: 43px 8px 26px 15px;
+    margin: 0;
+    padding: 0px 8px 26px 15px;
+    background: repeating-linear-gradient(
+      #fafafa 0px,
+      #fafafa 30px,
+      #e1e1e1 30px,
+      #e1e1e1 31px
+    );
   }
+
+  &__deco {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 16px 0px;
+    padding: 0;
+  }
+
+  &__element {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--icon-fourth-color);
+  }
+  &__place {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.86;
+    text-align: center;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding-bottom: 60px;
+
+  &__slide {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+    border: none;
+    background-color: #d9d9d9;
+    cursor: pointer;
+  }
+}
+.current {
+  width: 12px;
+  height: 12px;
+  border: none;
+  background-color: var(--bg-primary-color);
+  background-image: url('../images/svg/svgoriginal/house-red.svg');
 }
