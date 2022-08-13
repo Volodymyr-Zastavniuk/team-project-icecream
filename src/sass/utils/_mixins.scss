@@ -5,7 +5,7 @@
 }
 
 @mixin for-phone-only {
-  @media (max-width: 767.99px) {
+  @media (max-width: 767.5px) {
     @content;
   }
 }
@@ -17,13 +17,13 @@
 }
 
 @mixin for-tablet-only {
-  @media (min-width: 768px) and (max-width: 1199.99px) {
+  @media (min-width: 768px) and (max-width: 1199.5px) {
     @content;
   }
 }
 
 @mixin for-phone-and-tablet-only {
-  @media (max-width: 1199.99px) {
+  @media (max-width: 1199.5px) {
     @content;
   }
 }
