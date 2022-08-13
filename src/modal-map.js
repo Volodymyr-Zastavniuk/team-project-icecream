@@ -1,15 +1,13 @@
 (() => {
-  refs = {
-    openModalBtn: document.querySelector('[data-modal-open-map]'),
-    closeModalBtn: document.querySelector('[data-modal-close-map]'),
-    modal: document.querySelector('[data-modal-map]'),
-    htmlLock: document.querySelector('body'),
-  };
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+  const mapBtnOpen = document.querySelector('[data-modal-open-map');
+  const mapBtnClose = document.querySelector('[data-modal-close-map]');
+  const map = document.querySelector('[data-modal-map]');
+  const htmlmaplock = document.querySelector('body');
 
-  function toggleModal() {
-    refs.modal.classList.toggle('map-is-hidden');
-    refs.htmlLock.classList.toggle('overflow-hidden');
-  }
+  const toggleMenu = () => {
+    map.classList.toggle('map-is-hidden');
+    htmlmaplock.classList.toggle('overflow-hidden');
+  };
+  mapBtnOpen.addEventListener('click', toggleMenu);
+  mapBtnClose.addEventListener('click', toggleMenu);
 })();
