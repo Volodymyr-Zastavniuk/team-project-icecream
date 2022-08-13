@@ -1,36 +1,26 @@
-.link {
-  text-decoration: none;
-  font-style: normal;
-  color: inherit;
-  transition: color var(--transition-duration-function);
-
-  &:hover {
-    color: var(--accent-color);
-  }
-}
-
-.list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.spacer {
-  height: 6px;
+.header {
+  padding: 6px 0 1px;
+  position: relative;
   background-color: var(--bg-third-color);
 
   @include for-tablet-up {
-    height: 30px;
+    padding: 30px 0 1px;
   }
 
   @include for-desktop-up {
-    height: 35px;
+    padding: 35px 0 1px;
   }
-}
 
-.header {
-  position: relative;
-  background-color: var(--bg-third-color);
+  &__scrolled {
+    padding: 1px 0 1px;
+    position: sticky;
+    top: 0px;
+    left: 0;
+    z-index: 10;
+
+    animation-name: fadein;
+    animation-duration: 300ms;
+  }
 
   &__inner {
     height: 52px;
@@ -46,8 +36,13 @@
     }
   }
 
+  &__logo {
+    display: block;
+  }
+
   &__nav {
     display: none;
+
     @include for-desktop-up {
       display: flex;
       margin: 0 auto;
@@ -55,16 +50,21 @@
   }
 
   &__nav-list {
-    flex-direction: row;
+    display: flex;
+  }
+
+  &__nav-item {
+    padding: 13px 18px;
   }
 
   &__nav-link {
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.32;
     color: var(--text-secondary-color);
-    padding: 13px 17px;
-    border: none;
+
+    &:focus {
+      color: inherit;
+    }
   }
 
   // "buy now" кнопка в главном меню
@@ -79,43 +79,136 @@
   // кнопка мобильного меню "burger"
   &__button-open {
     margin-left: auto;
-    position: relative;
     padding: 4px;
+    display: flex;
+    align-items: center;
+
     border: none;
     background: none;
     cursor: pointer;
-    width: 28px;
-    height: 20px;
-    display: flex;
-    align-items: center;
 
     @include for-desktop-up {
       display: none;
     }
   }
 
-  // иконка мобильного меню "бургер"
-  &__icon-open {
-    width: 20px;
-    height: 1px;
-    background-color: var(--accent-color);
+  // мобильное меню
+  &__mobile-menu {
+    display: block;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
 
-    &::before,
-    &::after {
-      content: '';
-      width: 20px;
-      height: 1px;
-      position: absolute;
-      left: 0;
-      background-color: inherit;
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+    background-color: var(--bg-backdrop-color);
+    transition: opacity 150ms linear, visibility 250ms linear;
+
+    @include for-desktop-up {
+      display: none;
     }
-    &::before {
-      top: 4px;
-      left: 4px;
+
+    &.is-open {
+      opacity: 1;
+      pointer-events: initial;
+      visibility: visible;
     }
-    &::after {
-      left: 4px;
-      bottom: 4px;
+  }
+
+  &__button-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 4px;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include for-tablet-up {
+      right: 32px;
     }
+  }
+
+  &__menu-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    padding: 60px 0px;
+    width: 250px;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--bg-modal-color);
+    box-shadow: (8px 0px 20px rgba(0, 0, 0, 0.25));
+
+    background-color: var(--bg-modal-color);
+    transition: transform 250ms linear;
+
+    transform: translateX(-100%);
+
+    .header__mobile-menu.is-open & {
+      transform: translateX(0);
+    }
+    @include for-tablet-up {
+      width: 254px;
+    }
+  }
+
+  // &__mobile-nav {
+  // }
+
+  &__mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__mobile-nav-item {
+    display: block;
+    border-top: 1px solid var(--menu-border-color);
+    border-bottom: 1px solid var(--menu-border-color);
+  }
+
+  &__mobile-nav-link {
+    display: block;
+    padding: 12px 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.32;
+
+    color: var(--text-secondary-color);
+  }
+
+  // "buy now" кнопка в мобильном меню
+  &__mobile-button {
+    order: -1;
+    margin: 0 20px;
+
+    @include for-tablet-up {
+      margin: 0 34px;
+    }
+  }
+}
+
+// анимация появления меню навигации при скролле страницы
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(-52px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
