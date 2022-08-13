@@ -99,6 +99,31 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+
+.advantades__inner--heart::before{
+  content: '';
+  width: 33px;
+  height: 50px;
+  background-image: url(../images/heart@1x.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 25px;
+  @include for-pixel-ratio-2{
+    background-image: url(../images/heart@2x.png);
+  }
+
+  @include for-tablet-up {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 41px;
+  }
+  @include for-desktop-up {
+    margin-bottom: 55px;
+  }
+}
+
+
 .advantades__icon{
   margin-bottom: 25px;
 
