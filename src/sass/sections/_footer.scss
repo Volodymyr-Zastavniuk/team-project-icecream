@@ -110,7 +110,7 @@
 }
 // media
 
-@media screen and(min-width:768px) {
+@media screen and (min-width: 768px) {
   .footer__content {
     display: flex;
     justify-content: space-between;
@@ -170,7 +170,7 @@
   }
 }
 
-@media screen and(min-width:1200px) {
+@media screen and (min-width: 1200px) {
   .footer {
     padding-top: 120px;
   }
@@ -180,7 +180,7 @@
   }
 
   .footer__block-text {
-    max-width: 472px;
+    max-width: 480px;
   }
 
   .footer__not-big-text {
