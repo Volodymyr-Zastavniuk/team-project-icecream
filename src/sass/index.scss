@@ -4,6 +4,8 @@
 @import './utils/vars';
 
 @import './components/container';
+@import './components/list';
+@import './components/link';
 @import './components/button';
 
 @import './sections/header';
@@ -15,3 +17,4 @@
 @import './sections/reviews';
 @import './sections/contacts';
 @import './sections/footer';
+@import './sections/modal-map';
