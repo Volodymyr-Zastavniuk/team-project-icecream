@@ -1,112 +1,100 @@
 .hero {
-  @media screen and (max-width: 767px) {
-    height: 444px;
-    background-color: var(--bg-third-color);
-    
-  }
-  
-  @media screen and (min-width: 768px) {
-    height: 334px;
-    background-color: var(--bg-third-color);
-    
-  }
-  @media screen and (min-width: 1200px) {
-    height: 577px;
-    background-color: var(--bg-third-color);
-   
-  }
-}
-
-.container.hero__container {
   position: relative;
-  @media screen and (max-width: 767px) {
-    height: 444px;
-    background-image: url(../img-hero/herobg.png);
-    background-repeat: no-repeat;
-    background-position: 36px 25px;
+  background-color: var(--bg-third-color);
+}
+// большой круг за мороженным
+
+.hero__container {
+  position: relative;
+  height: 444px;
+  padding-top: 0px;
+
+  @include for-phone-only {
+    overflow: hidden;
   }
+
   @media screen and (min-width: 768px) {
     height: 334px;
-    background-image: url(../img-hero/herobgtab.png);
-    background-repeat: no-repeat;
-    background-position: 243px -32px;
+    padding-top: 20px;
   }
   @media screen and(min-width: 1200px) {
+    padding-top: 60px;
     height: 577px;
-    background-image: url(../img-hero/herobgdes.png);
-    background-repeat: no-repeat;
-    background-position: 517px -33px;
+  }
+
+  &::after {
+    content: '';
+    border-radius: 50%;
+    z-index: 0;
+    position: absolute;
+    background-color: var(--icon-primary-color);
+
+    height: 346px;
+    width: 346px;
+    top: 25px;
+    right: -62px;
+
+    @include for-tablet-up {
+      height: 334px;
+      width: 334px;
+      top: -32px;
+      left: 248px;
+    }
+
+    @include for-desktop-up {
+      height: 534px;
+      width: 534px;
+      top: -33px;
+      left: 517px;
+    }
   }
 }
 
-
-
-
 .hero__title {
-    @media screen and (max-width: 767px) {
-      position: relative;
-      top: 136px;
-      z-index: 2;
-      margin-bottom: 20px;
-      max-width: 218px;
-      font-family: var(--secondary-font);
-      font-weight: 400;
-      font-size: 26px;
-      line-height: 1.14;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--text-secondary-color);
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary-color);
+
+  @media screen and (max-width: 767px) {
+    position: relative;
+    top: 136px;
+    z-index: 2;
+    margin-bottom: 20px;
+    max-width: 218px;
   }
 
   @media screen and (min-width: 768px) {
-      width: 162px;
-      padding-top: 20px;
-      font-family: var(--secondary-font);
-      font-weight: 400;
-      font-size: 22px;
-      line-height: 1.14;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      top: 136px;
-      color: var(--text-secondary-color);
+    width: 162px;
+    font-size: 22px;
   }
 
   @media screen and (min-width: 1200px) {
-      margin-top: 0;
-      margin-bottom: 24px;
-      width: 277px;
-      font-family: var(--secondary-font);
-      font-weight: 400;
-      font-size: 38px;
-      line-height: 1.16;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--text-secondary-color);
+    margin-top: 0;
+    margin-bottom: 24px;
+    width: 277px;
+    font-size: 38px;
+    line-height: 1.16;
   }
-
 }
 .hero__word {
-  @media screen and (max-width: 767px) {
-    font-size: 48px;
-    line-height: 0.96;
-    color: var(--text-third-color);
-  }
+  color: var(--text-third-color);
+  font-size: 48px;
+  line-height: 0.96;
 
   @media screen and (min-width: 768px) {
     font-size: 34px;
-    line-height: 0.90;
-    color: var(--text-third-color);
+    line-height: 0.9;
   }
 
   @media screen and (min-width: 1200px) {
     font-size: 58px;
-      line-height: 0.91;
-      color: var(--text-third-color);
+    line-height: 0.91;
   }
-
 }
-
-
 
 .hero__buttons {
   @media screen and (max-width: 767px) {
@@ -114,146 +102,18 @@
     position: absolute;
     z-index: 2;
     top: 262px;
-    
+    gap: 8px;
   }
 
   @media screen and (min-width: 768px) {
     display: flex;
+    gap: 8px;
     margin-bottom: 20px;
   }
 
   @media screen and (min-width: 1200px) {
-    display: flex;
-    margin-left: 16px;
-    margin-bottom: 40px;
-    
+    gap: 12px;
   }
- 
-}
-.button__red {
-  @media screen and (max-width: 767px) {
-    margin-right: 9px;
-    width: 62px;
-    text-align: center;
-    border-radius: 22px;
-    border: none;
-    cursor: pointer;
-  
-  font-family: var(--primary-font);
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 1.25;
-  
-  color: var(--text-secondary-color);
-  background-color: var(--text-third-color);
-  transition: background-color var(--transition-duration-function);
-  }
-
-  @media screen and (min-width: 768px) {
-    margin-right: 8px;
-    width: 62px;
-    text-align: center;
-    border-radius: 22px;
-    border: none;
-    cursor: pointer;
-  
-  font-family: var(--primary-font);
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 1.30;
-  
-  color: var(--text-secondary-color);
-  background-color: var(--text-third-color);
-  transition: background-color var(--transition-duration-function);
-  }
-
-  @media screen and (min-width: 1200px) {
-    margin-right: 12px;
-    
-    width: 107px;
-    height: 40px;
-
-    text-align: center;
-    border-radius: 22px;
-    border: none;
-    cursor: pointer;
-  
-  font-family: var(--primary-font);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.30;
-  
-  color: var(--text-secondary-color);
-  background-color: var(--text-third-color);
-  transition: background-color var(--transition-duration-function);
-  }
-}
-.button__white {
-  @media screen and (max-width: 767px) {
-  width: 83px;
-  height: 24px;
-  border-radius: 22px;
-  border: none;
-  cursor: pointer;
-
-  font-family: var(--primary-font);
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 1.25;
-
-  color: var(--accent-color);
-  background-color: var(--bg-primary-color);
-  transition: background-color var(--transition-duration-function);
-
-  &:hover,
-  &:focus {
-    background-color: var(--btn-hover-bg-color);
-  }
-  }
-  @media screen and (min-width: 768px) {
-    width: 83px;
-    height: 24px;
-    border-radius: 22px;
-    border: none;
-    cursor: pointer;
-  
-    font-family: var(--primary-font);
-    font-weight: 400;
-    font-size: 8px;
-    line-height: 1.30;
-  
-    color: var(--accent-color);
-    background-color: var(--bg-primary-color);
-    transition: background-color var(--transition-duration-function);
-  
-    &:hover,
-    &:focus {
-      background-color: var(--btn-hover-bg-color);
-    }
-
-  }
-  @media screen and (min-width: 1200px) {
-    width: 138px;
-    height: 40px;
-  border-radius: 22px;
-  border: none;
-  cursor: pointer;
-
-  font-family: var(--primary-font);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.30;
-
-  color: var(--accent-color);
-  background-color: var(--bg-primary-color);
-  transition: background-color var(--transition-duration-function);
-
-  &:hover,
-  &:focus {
-    background-color: var(--btn-hover-bg-color);
-  }
-  }
-  
 }
 
 .hero__milk {
@@ -264,7 +124,7 @@
   @media screen and (min-width: 768px) {
     position: absolute;
     left: 32px;
-    top: 164px;
+    bottom: 16px;
     width: 152px;
     height: 154px;
   }
@@ -272,25 +132,23 @@
   @media screen and (min-width: 1200px) {
     position: absolute;
     left: 16px;
-    top: 301px;
+    bottom: 60px;
     width: 213px;
     height: 216px;
   }
-
 }
 
 .hero__box {
   margin-left: 184px;
   margin-top: 61px;
+
   @media screen and (min-width: 1200px) {
     margin-top: 108px;
     margin-left: 229px;
   }
-
 }
 
 .hero__paragraph {
-  
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -303,6 +161,8 @@
     line-height: 1.5;
     color: var(--text-secondary-color);
     margin-bottom: 7px;
+    position: relative;
+    z-index: 1;
   }
 
   @media screen and (min-width: 1200px) {
@@ -311,55 +171,70 @@
     line-height: 1.18;
     margin-bottom: 20px;
   }
-
 }
 
-.hero__svg {
-  @media screen and (max-width: 767px) {
+.hero__button {
+  @include for-phone-only {
     display: none;
   }
 
-  @media screen and (min-width: 768px) {
+  @include for-tablet-up {
     width: 18px;
     height: 18px;
+    padding: 0;
     border-radius: 50%;
     border: none;
+    background-color: var(--text-secondary-color);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 500ms ease;
+
+    &:hover {
+      background: var(--btn-hover-bg-color);
+    }
+
+    @include for-desktop-up {
+      width: 26px;
+      height: 26px;
+    }
   }
 
-  @media screen and (min-width: 1200px) {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    border: none;
-  }
+  &-icon {
+    fill: var(--text-third-color);
+    transform: scale(0.8);
 
+    @include for-desktop-up {
+      transform: scale(1);
+    }
+  }
 }
 
 .hero__ice-cream {
+  position: absolute;
+  z-index: 1;
+
   @media screen and (max-width: 767px) {
-    position: absolute;
-    left: 117px;
+    // left: 117px;
+    right: 32px;
     top: 34px;
     height: 410px;
-    z-index: 1;
   }
 
   @media screen and (min-width: 768px) {
-    position: absolute;
-    left: 313px;
+    left: 322px;
     bottom: 0;
     height: 336px;
-    z-index: 1;
   }
 
   @media screen and (min-width: 1200px) {
-    position: absolute;
     left: 636px;
     bottom: 0;
     height: 557px;
-    z-index: 1;
   }
-
 }
 
 .hero__girl {
@@ -377,14 +252,10 @@
   }
 
   @media screen and (min-width: 1200px) {
-    position: absolute;
-    z-index: 1;
     right: 16px;
-    bottom: 0;
     width: 304px;
     height: 241px;
   }
-
 }
 
 .hero__numbers {
@@ -395,7 +266,8 @@
   letter-spacing: 0.04em;
   color: var(--text-third-color);
   z-index: 1;
-    
+  text-align: center;
+
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -403,56 +275,29 @@
   @media screen and (min-width: 768px) {
     position: absolute;
     top: 16px;
-    right: 32px;
-    width: 43px;
-      .numbers__second {
-        width: 56px;
-      }
+    right: 16px;
   }
 
   @media screen and (min-width: 1200px) {
-    position: absolute;
     top: 68px;
     right: 16px;
-    width: 54px;
-    
-    font-weight: 400;
     font-size: 46px;
-
-      .numbers__second {
-        width: 96px;
-      }
   }
-
 }
 
 .numbers__title {
   text-align: right;
+  margin-right: 10px;
+  letter-spacing: 0;
   font-family: var(--primary-font);
   color: var(--text-secondary-color);
   font-size: 8px;
-  line-height: 1.30;
-  
+  line-height: 1.3;
 
   @media screen and (min-width: 1200px) {
     font-size: 14px;
+    margin-right: 18px;
   }
-
-}
-
-.numbers__title_two {
-  text-align: right;
-  font-family: var(--primary-font);
-  color: var(--text-secondary-color);
-  font-size: 8px;
-  line-height: 1.30;
-  width: 56px;
-  
-
-  @media screen and (min-width: 1200px) {
-    font-size: 14px;
-  }
-
 }
 
 .numbers {
@@ -472,16 +317,17 @@
   height: 16px;
   background-color: white;
   border-radius: 50%;
+
   @media screen and (min-width: 1200px) {
-    right: -5px;
+    width: 30px;
+    height: 30px;
   }
-  
 }
 
 .numbers__after-two {
   position: absolute;
-  top: -1px;
-  right: 13px;
+  top: 0px;
+  right: 0px;
   z-index: -1;
   width: 16px;
   height: 16px;
@@ -489,7 +335,7 @@
   border-radius: 50%;
 
   @media screen and (min-width: 1200px) {
-    
-    right: 33px;
+    width: 30px;
+    height: 30px;
   }
 }
