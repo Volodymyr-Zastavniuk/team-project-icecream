@@ -71,6 +71,7 @@
 
   &__nav-list {
     display: flex;
+    z-index: 1;
   }
 
   &__nav-item {
