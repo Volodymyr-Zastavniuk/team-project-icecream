@@ -1,47 +1,53 @@
 .hero {
   @media screen and (max-width: 767px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    position: relative;
     height: 444px;
     background-color: var(--bg-third-color);
+    
   }
   
   @media screen and (min-width: 768px) {
-    position: relative;
-    background-color: var(--bg-third-color);
     height: 334px;
+    background-color: var(--bg-third-color);
+    
   }
   @media screen and (min-width: 1200px) {
     height: 577px;
     background-color: var(--bg-third-color);
+   
   }
 }
 
-// .hero__circle {
-//   position: absolute;
-//   top: 25px;
-//   left: 36px;
-//   width: 346px;
-//   height: 344px;
-//   background-color: var(--text-fourth-color);
-//   border-radius: 50%;
+.container.hero__container {
+  position: relative;
+  @media screen and (max-width: 767px) {
+    height: 444px;
+    background-image: url(../img-hero/herobg.png);
+    background-repeat: no-repeat;
+    background-position: 36px 25px;
+  }
+  @media screen and (min-width: 768px) {
+    height: 334px;
+    background-image: url(../img-hero/herobgtab.png);
+    background-repeat: no-repeat;
+    background-position: 243px -32px;
+  }
+  @media screen and(min-width: 1200px) {
+    height: 577px;
+    background-image: url(../img-hero/herobgdes.png);
+    background-repeat: no-repeat;
+    background-position: 517px -33px;
+  }
+}
 
-//   @media screen and (min-width: 768px) {
-//     z-index: 0;
-//     bottom: 51px;
-//     left: 243px;
-//     width: 335px;
-//     height: 333px;
-//   }
 
-// }
+
 
 .hero__title {
     @media screen and (max-width: 767px) {
-      position: absolute;
+      position: relative;
+      top: 136px;
       z-index: 2;
-      margin-left: 20px;
+      margin-bottom: 20px;
       max-width: 218px;
       font-family: var(--secondary-font);
       font-weight: 400;
@@ -49,17 +55,13 @@
       line-height: 1.14;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      top: 136px;
       color: var(--text-secondary-color);
   }
 
   @media screen and (min-width: 768px) {
-    width: 162px;
-    margin: 0;
-    padding-top: 20px;
-    margin-left: 32px;
-    margin-bottom: 20px;
-    font-family: var(--secondary-font);
+      width: 162px;
+      padding-top: 20px;
+      font-family: var(--secondary-font);
       font-weight: 400;
       font-size: 22px;
       line-height: 1.14;
@@ -70,7 +72,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-      padding-top: 60px;
+      margin-top: 0;
       margin-bottom: 24px;
       width: 277px;
       font-family: var(--secondary-font);
@@ -79,7 +81,6 @@
       line-height: 1.16;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      margin-left: 16px;
       color: var(--text-secondary-color);
   }
 
@@ -112,13 +113,12 @@
     display: flex;
     position: absolute;
     z-index: 2;
-    margin-left: 20px;
     top: 262px;
+    
   }
 
   @media screen and (min-width: 768px) {
     display: flex;
-    margin-left: 32px;
     margin-bottom: 20px;
   }
 
@@ -339,7 +339,7 @@
   @media screen and (max-width: 767px) {
     position: absolute;
     left: 117px;
-    bottom: 0;
+    top: 34px;
     height: 410px;
     z-index: 1;
   }
@@ -394,6 +394,7 @@
   line-height: 1.14;
   letter-spacing: 0.04em;
   color: var(--text-third-color);
+  z-index: 1;
     
   @media screen and (max-width: 767px) {
     display: none;
@@ -404,8 +405,8 @@
     top: 16px;
     right: 32px;
     width: 43px;
-      .title__second {
-        width: 51px;
+      .numbers__second {
+        width: 56px;
       }
   }
 
@@ -418,8 +419,8 @@
     font-weight: 400;
     font-size: 46px;
 
-      .title__second {
-        max-width: 92px;
+      .numbers__second {
+        width: 96px;
       }
   }
 
@@ -431,6 +432,22 @@
   color: var(--text-secondary-color);
   font-size: 8px;
   line-height: 1.30;
+  
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
+
+}
+
+.numbers__title_two {
+  text-align: right;
+  font-family: var(--primary-font);
+  color: var(--text-secondary-color);
+  font-size: 8px;
+  line-height: 1.30;
+  width: 56px;
+  
 
   @media screen and (min-width: 1200px) {
     font-size: 14px;
@@ -441,14 +458,38 @@
 .numbers {
   position: relative;
   z-index: 1;
+  margin-bottom: 16px;
+}
+.numbers__second {
+  position: relative;
 }
 .numbers__after {
   position: absolute;
-  top: 0;
+  top: -3;
   right: 0;
-  z-index: 0;
+  z-index: -1;
   width: 16px;
   height: 16px;
   background-color: white;
   border-radius: 50%;
+  @media screen and (min-width: 1200px) {
+    right: -5px;
+  }
+  
+}
+
+.numbers__after-two {
+  position: absolute;
+  top: -1px;
+  right: 13px;
+  z-index: -1;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+
+  @media screen and (min-width: 1200px) {
+    
+    right: 33px;
+  }
 }
