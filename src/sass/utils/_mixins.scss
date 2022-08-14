@@ -23,7 +23,7 @@
 }
 
 @mixin for-phone-and-tablet-only {
-  @media (max-width: 1199.99px) {
+  @media (max-width: 1199px) {
     @content;
   }
 }
