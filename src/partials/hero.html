@@ -1,4 +1,5 @@
 <section class="hero">
+  <!-- <div class="hero__circle"></div> -->
   <h1 class="hero__title">ice cream made with <span class="hero__word">passion</span></h1>
   <div class="hero__buttons">
     <button 
@@ -6,7 +7,7 @@
     type="button"
     href="#Products">Products</button>
     <button 
-    class="button"
+    class="button__white"
     type="button"
     href="#How it's made?">
       How it’s made?
@@ -33,13 +34,16 @@
       ./img-hero/milk@2tab.webp 2x"
       type="image/webp"/>
   </picture>
-  <img src="./img-hero/milk-standart.png" alt="Кувшин с молоком">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-  <button>
+  
+  <img src="./img-hero/milk-standart.png" alt="Кувшин с молоком" class="hero__milk">
+  <div class="hero__box">
+  <p class="hero__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+  <button class="hero__svg">
     <svg width="26" height="26">
       <use></use>
     </svg>
   </button>
+</div>
   <picture>
     <source
         media="(min-width: 320px)"
@@ -71,7 +75,7 @@
         ./img-hero/ice-cream@2des.webp 2x"
         type="image/webp"/>
   </picture>
-  <img src="./img-hero/ice-cream-standart.png" alt="Мороженное рожок">
+  <img src="./img-hero/ice-cream-standart.png" alt="Мороженное рожок" class="hero__ice-cream">
   <picture>
     <source
       media="(min-width: 768px"
@@ -93,7 +97,15 @@
       ./img-hero/girl@2des.webp 2x"
       type="image/webp"/>
   </picture>
-  <img src="./img-hero/girl-standart.png" alt="Девушка с мороженым">
-  <div>16</div>
-  <div>23</div>
+  <img src="./img-hero/girl-standart.png" alt="Девушка с мороженым" class="hero__girl">
+  <div class="hero__numbers">
+  <div class="numbers">16
+    <div class="numbers__after"></div>
+    <div class="numbers__title">cafes</div>
+  </div>
+  <div class="title__second">23
+    
+    <div class="numbers__title">food trucks</div>
+  </div>
+</div>
 </section>
