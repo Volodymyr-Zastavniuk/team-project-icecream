@@ -1,0 +1,35 @@
+.about-backdrop {
+    padding: 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+  
+    visibility: visible;
+    opacity: 1;
+    overflow: auto;
+  
+    background-color: rgba(0, 0, 0, 0.5);
+  
+    transition: opacity var(--transition-duration-function),
+      visibility var(--transition-duration-function);
+  
+    &.fr-is-hidden {
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    }
+  }
+
+  .modal-about {
+    margin: 0 auto;
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+  overflow: auto;
+  transform: scale(1);
+  transition: transform var(--transition-duration-function);
+  border-radius: 20px;
+  }
