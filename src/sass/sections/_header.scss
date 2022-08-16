@@ -84,7 +84,6 @@
     color: var(--text-secondary-color);
   }
 
- 
   // "buy now" кнопка в главном меню
   &__button {
     display: none;
@@ -123,7 +122,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 20;
+    z-index: 200;
 
     background-color: var(--bg-backdrop-color);
     transition: opacity 150ms linear, visibility 250ms linear;
