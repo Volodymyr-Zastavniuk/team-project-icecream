@@ -84,6 +84,7 @@
     color: var(--text-secondary-color);
   }
 
+ 
   // "buy now" кнопка в главном меню
   &__button {
     display: none;
@@ -229,8 +230,6 @@
     transform: translateY(0px);
   }
 }
-
-
 
 .heartbeat {
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
