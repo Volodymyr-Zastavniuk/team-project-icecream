@@ -195,7 +195,6 @@
   position: fixed;
   right: 20;
   bottom: 20;
-  padding: 0;
   z-index: 5;
   width: 40px;
   height: 40px;
@@ -213,10 +212,12 @@
     background: var(--btn-hover-bg-color);
   }
 }
-
+.contacts__top-link {
+  line-height: 0;
+}
 .contacts__top-icon {
   fill: var(--text-third-color);
-  transform: rotate(-90deg) scale(1.2);
+  transform: rotate(-90deg) scale(1);
 }
 .contacts__to-top.top__scrolled {
   display: flex;
