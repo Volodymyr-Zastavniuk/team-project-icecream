@@ -28,7 +28,8 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 22px;
+    // gap: 22px;
+    gap: 46px;
   }
   @include for-desktop-up {
     align-items: center;
