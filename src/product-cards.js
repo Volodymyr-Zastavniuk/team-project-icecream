@@ -27,3 +27,14 @@
   };
   cardBtn3.addEventListener('click', toggleMenu);
 })();
+
+// для текста в hero
+(() => {
+  const cardBtn = document.querySelector('[data-hero-btn');
+  const card = document.querySelector('[hero-card]');
+
+  const toggleMenu = () => {
+    card.classList.toggle('hero-open');
+  };
+  cardBtn.addEventListener('click', toggleMenu);
+})();
