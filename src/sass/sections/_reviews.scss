@@ -11,7 +11,15 @@
     margin-bottom: 32px;
     border-radius: 50%;
     background-repeat: no-repeat;
-    background-image: url('../images/reviews/testimonials1.jpg');
+    &--first {
+      background-image: url('../images/reviews/testimonials1.jpg');
+    }
+    &--second {
+      background-image: url('../images/reviews/testimonials2.jpg');
+    }
+    &--third {
+      background-image: url('../images/reviews/testimonials3.jpg');
+    }
 
     @include for-tablet-only {
       margin-bottom: 20px;
@@ -139,6 +147,8 @@
 }
 
 .slick-dots {
+  position: relative;
+
   display: flex;
   justify-content: center;
   gap: 18px;
@@ -152,21 +162,23 @@
     padding-bottom: 60px;
     margin-top: 32px;
   }
-
-  &__slide {
-    width: 12px;
-    height: 12px;
-
-    border-radius: 50%;
-    border: none;
-    background-color: #d9d9d9;
-    cursor: pointer;
-  }
 }
-.current {
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+
+  margin: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
   width: 12px;
   height: 12px;
   border: none;
+  border-radius: 0;
   background-color: var(--bg-primary-color);
   background-image: url('../images/svg/svgoriginal/house-red.svg');
 }

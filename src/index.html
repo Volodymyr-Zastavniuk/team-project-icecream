@@ -13,6 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Titan+One&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <!-- Фавиконка -->
     <link rel="shortcut icon" href="./images/favicon.png" />
     <!-- Стили -->
@@ -46,6 +50,22 @@
     <script type="module" src="./product-cards.js"></script>
     <script type="module" src="./modal-about.js"></script>
     <script type="module" src="./modal-franchise.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        loop: true,
+      });
+    </script>
+
     <script type="module" src="./gr-card.js"></script>
     <script type="module" src="./hero-text.js"></script>
 
