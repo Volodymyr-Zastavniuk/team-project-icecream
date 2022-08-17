@@ -1,9 +1,10 @@
 <section class="hero">
   <div class="container hero__container">
-    <h1 class="hero__title" data-aos="fade-up"
-     data-aos-duration="3000">
-      ice cream made with <span class="hero__word" data-aos="fade-up"
-     data-aos-duration="3000">passion</span>
+    <h1 class="hero__title" data-aos="fade-up" data-aos-duration="3000">
+      ice cream made with
+      <span class="hero__word" data-aos="fade-up" data-aos-duration="3000"
+        >passion</span
+      >
     </h1>
     <div class="hero__buttons">
       <a class="link btn-small" href="#products">Products</a>
@@ -48,14 +49,18 @@
         class="hero__milk"
       />
     </picture>
-
     <div class="hero__box">
       <p class="hero__paragraph">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et
       </p>
-
-      <button class="hero__button" type="button" data-gr-btn>
+      <div class="hero__overlay" hero-card>
+        <p class="overlay__paragraph">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sequi,
+          animi modi maiores eos .
+        </p>
+      </div>
+      <button class="hero__button" type="button" data-hero-btn>
         <svg class="hero__button-icon" width="12" height="12">
           <use href="./images/svg/symbol-defs.svg#icon-arrow-forward"></use>
         </svg>
@@ -113,7 +118,7 @@
         class="hero__ice-cream"
       />
     </picture>
-    <!--  -->
+
     <picture>
       <source
         media="(max-width: 1199px)"

@@ -13,7 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Titan+One&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <!-- Фавиконка -->
     <link rel="shortcut icon" href="./images/favicon.png" />
     <!-- Стили -->
@@ -37,6 +40,8 @@
     <include src="./partials/footer.html"></include>
     <include src="./partials/modal-map.html"></include>
     <include src="./partials/modal-franchise.html"></include>
+    <include src="./partials/modal-about.html"></include>
+    <include src="./partials/gr-card.html"></include>
 
     <!-- Java Script -->
     <script type="module" src="./fixed-menu.js"></script>
@@ -45,11 +50,12 @@
     <script type="module" src="./product-cards.js"></script>
     <script type="module" src="./modal-about.js"></script>
     <script type="module" src="./modal-franchise.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
-      var swiper = new Swiper(".mySwiper", {
+      var swiper = new Swiper('.mySwiper', {
         pagination: {
-          el: ".swiper-pagination",
+          el: '.swiper-pagination',
           clickable: true,
         },
         autoplay: {
@@ -59,7 +65,10 @@
         loop: true,
       });
     </script>
-    
+
+    <script type="module" src="./gr-card.js"></script>
+    <script type="module" src="./hero-text.js"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
