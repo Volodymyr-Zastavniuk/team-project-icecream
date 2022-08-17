@@ -140,7 +140,7 @@
 .hero__box {
   margin-left: 184px;
   margin-top: 61px;
-
+  position: relative;
   @include for-desktop-up {
     margin-top: 108px;
     margin-left: 229px;
@@ -160,7 +160,6 @@
     line-height: 1.5;
     color: var(--text-secondary-color);
     margin-bottom: 7px;
-    position: relative;
     z-index: 1;
   }
 
@@ -347,7 +346,54 @@
   transition-timing-function: linear;
   transition-delay: 0;
 }
-.hero__button:focus {
+.hero__button:hover {
   transform: rotate(-90deg);
 }
 
+.hero__overlay {
+  @include for-phone-only {
+    display: none;
+  }
+
+  @include for-tablet-up {
+    width: 114px;
+    height: 48px;
+    background-color: var(--text-fourth-color);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    border-radius: 5%;
+  }
+
+  @include for-desktop-up {
+  width: 200px;
+  height: 66px;
+  }
+
+}
+
+.overlay__paragraph {
+  color: var(--text-secondary-color);
+  display: flex;
+  text-align: center;
+  @include for-phone-only {
+    display: none;
+  }
+  @include for-tablet-up{
+    font-size: 8px;
+  }
+  @include for-desktop-up {
+    font-size: 12px;
+  }
+
+}
+
+.hero-open {
+  opacity: 1;
+  transform: translateX(0%);
+  transition-property: opacity, transform;
+  transition-duration: 1000ms;
+  transition-timing-function: ease;
+}

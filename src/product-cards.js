@@ -3,7 +3,7 @@
   const card = document.querySelector('[data-card]');
 
   const toggleMenu = () => {
-    card.classList.toggle('text-is-open');
+    card.classList.toggle('hero-open');
   };
   cardBtn.addEventListener('click', toggleMenu);
 })();
