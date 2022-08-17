@@ -6,6 +6,10 @@
     #ffffff 80%
   );
 
+  @include for-desktop-up {
+    padding-bottom: 60px;
+  }
+
   &__wrapper {
     max-width: 767px;
     display: flex;
@@ -15,7 +19,7 @@
     }
 
     @include for-desktop-up {
-      max-width: 1013px;
+      max-width: 1045px;
     }
   }
 
@@ -40,6 +44,16 @@
   &__img {
     border-radius: 8px;
     overflow: hidden;
+
+    transition-property: transform;
+    transition-duration: 200ms;
+    transition-timing-function: linear;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
 
     @include for-tablet-up {
       border-radius: 20px;

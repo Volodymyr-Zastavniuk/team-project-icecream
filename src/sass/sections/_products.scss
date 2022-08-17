@@ -317,6 +317,10 @@
       transform: rotate(-90deg);
     }
 
+    @media screen and (min-width: 391px) {
+      height: 200px;
+    }
+
     @media screen and (min-width: 420px) {
       height: 180px;
     }
@@ -325,9 +329,9 @@
       height: 160px;
     }
 
-    @media screen and (min-width: 660px) {
-      height: 110px;
-    }
+    // @media screen and (min-width: 660px) {
+    //   height: 110px;
+    // }
 
     @include for-tablet-only {
       height: 300px;
@@ -336,5 +340,9 @@
     @include for-desktop-up {
       height: 250px;
     }
+  }
+
+  & .products-text {
+    margin-bottom: 0;
   }
 }
